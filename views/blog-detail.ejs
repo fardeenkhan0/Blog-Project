@@ -1,0 +1,73 @@
+<%- include('./header.ejs') %>
+<section class="blog-detail mtb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="blog-left">
+          <h1><%= d.title %></h1>
+          <div class="posted-on">
+            <p>
+              by <span>RSGiTECH</span> on
+              <span><%= d.createdAt.toLocaleDateString() %></span>
+            </p>
+          </div>
+          <div class="detail-img">
+            <img
+              src="<%= d.image.url %>"
+              alt="blog1"
+              height="350px"
+              width="250px"
+            />
+          </div>
+          <div class="blog-desc">
+            <p><%= d.descripition.slice( 0, 100) %></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-right">
+          <div class="right-widget recent-post">
+            <h3>Recent Blogs</h3>
+            <% r.forEach((recentitem)=>{ %>
+            <a href="#">
+              <div class="rb-box">
+                <div class="rb-box-img">
+                  <img
+                    src="<%= recentitem.image.url %>"
+                    height="80px"
+                    width="5px"
+                    alt="blog1"
+                  />
+                </div>
+                <div class="rb-box-desc">
+                  <h4><%= recentitem.title %></h4>
+                  <p><%= recentitem.createdAt.toLocaleDateString() %></p>
+                </div>
+              </div>
+            </a>
+            <% }) %>
+          </div>
+
+          <div class="right-widget categories">
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Culture</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Politics</a></li>
+              <li><a href="#">Opinion</a></li>
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Style</a></li>
+              <li><a href="#">Travel</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('./footer.ejs') %>

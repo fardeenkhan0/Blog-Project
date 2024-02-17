@@ -1,0 +1,29 @@
+
+<%- include('../../header.ejs') %>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>#ID</th>
+    <!-- <th>Image</th> -->
+    <th>Title</th>
+    <th>Discription</th>
+     <th>Image</th>
+    <th>Action</th>
+    <!-- <th>Posted On</th> -->
+    
+  </tr>
+  <td><%= view._id %></td>
+  <td><%= view.title %></td>
+  <td><%= view.descripition %></td>
+  <td><img src="<%= view.image.url %>" width="50px" alt="" /></td>
+
+    <td>
+      <a href="#" class="btn btn-primary btn-sm">View</a>
+      <a href="#" class="btn btn-info btn-sm">Edit</a>
+      <a href="#" class="btn btn-danger btn-sm">Delete</a>
+    </td>
+  </tr>
+  
+</table>
+
+<%- include('../../footer.ejs') %>

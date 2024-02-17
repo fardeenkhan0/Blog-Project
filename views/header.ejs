@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>Blogger</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="/css/styles.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/css/login.css"> -->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark p">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="/images/logo.png" alt="Angular Project" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active compo me-3">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item compo me-3">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item compo me-2">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item compo me-2">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item compo me-3">
+              <a href="/admin/dashboard" class="nav-link">Admin Dashboard</a>
+            </li>
+            <li class="compo me-3">
+              <a
+                style="text-transform: uppercase"
+                class="nav-link text-light"
+                href="#"
+              >
+                <%= name %>
+              </a>
+            </li>
+
+            <!-- <li>
+              <a href="#" class="nav-item">
+                <img src="<%= profileimage.url %>" alt="mdo" width="40" height="40" class="bg-dark ms-2" />
+              </a>
+            </li> -->
+
+            <!-- profile image-->
+            <li class="nav-item dropdown my-auto">
+              <a
+                href="#"
+                class="nav-link d-block link-body-emphasis text-decoration-none dropdown-toggle text-dark"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="<%= profileimage.url %>"
+                  alt="mdo"
+                  width="40"
+                  height="40"
+                  class="rounded bg-light ms-2"
+                />
+              </a>
+
+              <ul class="dropdown-menu text-small">
+                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="/logout">Log out</a></li>
+              </ul>
+            </li>
+            <!-- jdhjdk -->
+
+            <!-- <li class="nav-item">
+              <a href="/logout" class="nav-link">Log Out</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
