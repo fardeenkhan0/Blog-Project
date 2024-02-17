@@ -9,6 +9,7 @@ cloudinary.config({
   api_secret: "PJX7WiOOCe1p5AntC-l0OTmnUFc",
 });
 
+
 class AdminController {
   static dashboard = async (req, res) => {
     const { name, email, profileimage } = req.admin;
