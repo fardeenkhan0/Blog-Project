@@ -26,8 +26,9 @@
                 <h1>Blogs</h1>
               </div>
               <button
+                style="background-color: #221d2d; color: white"
                 type="button"
-                class="btn btn-primary btn-md"
+                class="btn-md compo"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
@@ -56,19 +57,21 @@
                 <td><img src="<%= item.image.url %>" width="50px" alt="" /></td>
 
                 <td>
-                  <!-- <div class="social-icons"> -->
-                  <a href="/blogview/<%= item.id %>" class="fb">
-                    <i class="fas fa-eye"></i
-                  ></a>
-                  <a href="/blogedit/<%= item.id %>" class="btn btn-primary">
-                    Edit
-                    <!-- <i class="fa-solid fa-pen-to-square"></i> -->
-                  </a>
-                  <a href="/blogdelete/<%= item.id %>" class="btn btn-danger">
-                    Delete
-                    <!-- <i class="fas-solid fas-trash"></i> -->
-                  </a>
-                  <!-- </div> -->
+                  <div class="social-icons">
+                    <a
+                      href="/blogview/<%= item.id %>"
+                      style="color: #221d2d"
+                      class="fk"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="/blogedit/<%= item.id %>" class="fk">
+                      <i class="fas fa-pen-square"></i>
+                    </a>
+                    <a href="/blogdelete/<%= item.id %>" class="fk">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </div>
                 </td>
               </tr>
               <% }) %>
@@ -116,7 +119,13 @@
             <input type="file" name="image" class="form-control" />
           </div>
           <br />
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button
+            style="background-color: #221d2d; color: white"
+            type="submit"
+            class="btn compo"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>

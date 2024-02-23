@@ -23,7 +23,7 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-dark p">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/home">
           <img src="/images/logo.png" alt="Angular Project" />
         </a>
         <button
@@ -45,11 +45,19 @@
             <li class="nav-item compo me-3">
               <a class="nav-link" href="/about">About</a>
             </li>
-            <li class="nav-item compo me-2">
+            <li class="nav-item compo me-3">
               <a class="nav-link" href="/contact">Contact</a>
             </li>
-            <li class="nav-item compo me-2">
+            <li class="nav-item compo me-3">
               <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item compo me-3">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Add Blog</a
+              >
             </li>
           </ul>
 
@@ -108,4 +116,58 @@
       </div>
     </nav>
   </body>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Blog</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form
+            action="/insertblog"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="md-3">
+              <label for="">Title</label>
+              <input type="text" name="title" class="form-control" />
+            </div>
+
+            <div class="md-3">
+              <label for="">Discription</label>
+              <textarea type="text" name="descripition" class="form-control">
+              </textarea>
+            </div>
+            <div class="md-3">
+              <label for="">Image</label>
+              <input type="file" name="image" class="form-control" />
+            </div>
+            <br />
+            <div class="compo">
+              <button
+                style="background-color: #221d2d; color: white"
+                type="submit"
+                class="btn"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>

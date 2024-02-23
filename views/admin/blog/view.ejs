@@ -1,7 +1,6 @@
 
 <%- include('../../header.ejs') %>
-
-<table class="table table-bordered table-striped">
+<center style="padding: 50px;"><table class="table table-bordered table-striped">
   <tr>
     <th>#ID</th>
     <!-- <th>Image</th> -->
@@ -14,16 +13,35 @@
   </tr>
   <td><%= view._id %></td>
   <td><%= view.title %></td>
-  <td><%= view.descripition %></td>
+  
+  <td style="width: 150px; height: 50px">
+    <%= view.descripition.slice( 0, 100) %>
+  </td>
+
+
+
+
   <td><img src="<%= view.image.url %>" width="50px" alt="" /></td>
 
-    <td>
-      <a href="#" class="btn btn-primary btn-sm">View</a>
-      <a href="#" class="btn btn-info btn-sm">Edit</a>
-      <a href="#" class="btn btn-danger btn-sm">Delete</a>
-    </td>
+  <td>
+    <div class="social-icons">
+      <a
+        href="/blogview/<%= view.id %>"
+        style="color: #221d2d"
+        class="fk"
+      >
+        <i class="fas fa-eye"></i>
+      </a>
+      <a href="/blogedit/<%= view.id %>" class="fk">
+        <i class="fas fa-pen-square"></i>
+      </a>
+      <a href="/blogdelete/<%= view.id %>" class="fk">
+        <i class="fas fa-trash"></i>
+      </a>
+    </div>
+  </td>
   </tr>
   
-</table>
+</table></center>
 
 <%- include('../../footer.ejs') %>

@@ -28,4 +28,3 @@ const BlogSchema = new mongoose.Schema(
 //create collection
 const BlogModel = mongoose.model("blog", BlogSchema); //blog is the name of collection
 module.exports = BlogModel;
-

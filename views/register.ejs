@@ -17,10 +17,11 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-blue">
+    <nav class="navbar navbar-expand-md navbar-dark p">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="/images/logo.png" alt="Angular Project" />
@@ -36,154 +37,80 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="/login" class="nav-link">Login</a>
-            </li>
-          </ul>
-        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse"></div>
       </div>
     </nav>
+
     <section class="login-wrap mtb-40">
       <div class="container">
         <center>
-          <!-- Column-2 -->
-          <div class="col-lg-6 bglogin p-4">
-            <form
-              action="/insertregister"
-              method="post"
-              enctype="multipart/form-data"
-            >
-              <!-- logo -->
-              <!-- <center>
-                <img
-                  class="mb-4 rounded-circle"
-                  src="./Images/SignUpImage.jpeg"
-                  alt="Sign Up Image"
-                  width="20%"
-                  height="20%"
-                />
-              </center> -->
-
-              <!-- Heading (Register Here) -->
-              <h1 class="mb-5 text-center">Register Here</h1>
-              <% if(message.length > 0){ %>
-              <div class="alert alert-danger"><%= message %></div>
-              <% } %>
-              <!-- User Name -->
-              <div class="row mb-4">
-                <div
-                  class="col-lg-2 text-center bg-secondary rounded text-light fw-light my-auto p-2"
+          <div class="navi">
+            <div class="compo" style="width: 449px; height: 449px">
+              <div class="content">
+                <h2>Sign up</h2>
+                <% if(message.length > 0){ %>
+                <div class="alert alert-danger"><%= message %></div>
+                <% } %>
+                <form
+                  action="/insertregister"
+                  method="post"
+                  enctype="multipart/form-data"
                 >
-                  Name
-                </div>
-                <div class="col-lg-10">
-                  <input
-                    name="name"
-                    class="form-control text-capitalize"
-                    type="text"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-              </div>
+                  <div class="inputBox">
+                    <input
+                      name="name"
+                      class="form-control text-capitalize"
+                      type="text"
+                      placeholder="Username"
+                      required
+                    />
+                  </div>
+                  <div class="inputBox">
+                    <input
+                      name="password"
+                      class="form-control"
+                      type="password"
+                      placeholder="Password"
+                      required
+                    />
+                  </div>
 
-              <!-- Email -->
-              <div class="row mb-3">
-                <div
-                  class="col-lg-2 text-center bg-secondary rounded text-light fw-light my-auto p-2"
-                >
-                  Email
-                </div>
-                <div class="col-lg-10">
-                  <input
-                    name="email"
-                    class="form-control"
-                    type="email"
-                    placeholder="name@example.com"
-                    required
-                  />
-                </div>
-              </div>
+                  <div class="inputBox">
+                    <input
+                      name="confirmpassword"
+                      class="form-control"
+                      placeholder="Confirm Password"
+                      type="password"
+                      required
+                    />
+                  </div>
 
-              <!-- Password -->
-              <div class="row mb-4">
-                <div
-                  class="col-lg-2 text-center bg-secondary rounded text-light fw-light my-auto p-2"
-                >
-                  Password
-                </div>
-                <div class="col-lg-10">
-                  <input
-                    name="password"
-                    class="form-control"
-                    type="password"
-                    required
-                  />
-                </div>
-              </div>
+                  <div class="inputBox">
+                    <input type="file" name="profileimage" />
+                  </div>
 
-              <!-- Confirm Password -->
-              <div class="row mb-4">
-                <div
-                  class="col-lg-3 text-center bg-secondary rounded text-light fw-light my-auto p-2"
-                >
-                  Confirm Password
-                </div>
-                <div class="col-lg-9">
-                  <input
-                    name="confirmpassword"
-                    class="form-control"
-                    type="password"
-                    required
-                  />
-                </div>
+                  <div class="inputBox">
+                    <input type="submit" value="Signup" />
+                  </div>
+                </form>
               </div>
-
-              <!-- Choose File -->
-              <div class="row mb-4">
-                <div class="col-lg-9">
-                  <input type="file" name="profileimage" />
-                </div>
-              </div>
-              <!-- Button (Login) -->
-              <div class="row">
-                <button type="submit" class="btn btn-primary mb-5 btn-lg">
-                  Register
-                </button>
-              </div>
-            </form>
+              <a href="./" class="btns">Back to sign in</a>
+            </div>
           </div>
-          <!-- End Column-2 -->
         </center>
       </div>
     </section>
 
-    <footer>
+    <footer class="p">
       <div class="container">
         <div class="copyright">
-          <div>Designed by RSGiTECH</div>
+          <div>Designed by Fardeen</div>
         </div>
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
+================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

@@ -19,9 +19,9 @@
     <div class="row">
       <% b.forEach((item)=>{ %>
       <div class="col-md-4">
-        <div class="blog-box ">
+        <!-- <div class="blog-box">
           <img
-            style="border: 5px goldenrod solid"
+            style="border: 5px #221d2d"
             src="<%= item.image.url %>"
             height="300px"
             width="200px"
@@ -39,6 +39,35 @@
             class="btn"
             >Read more...</a
           >
+        </div> -->
+        <div class="blog-box">
+          <img
+            style="width: 360px; height: 200px"
+            src="<%= item.image.url %>"
+            alt="Blog Image"
+          />
+          <div class="blog-details">
+            <h3 class="title">
+              <%= item.title %>
+              <hr />
+            </h3>
+            <p class="date">
+              Date: <%= item.createdAt.toLocaleDateString() %>"
+            </p>
+            <p class="description">
+              Descripition: <%= item.descripition.slice(0, 100) %>....
+            </p>
+            <button
+              style="background-color: #221d2d; color: white"
+              class="compo"
+            >
+              <a
+                href="/blog-detail/<%= item._id %>"
+                class="btn text-decoration-none text-light"
+                >Read more...</a
+              >
+            </button>
+          </div>
         </div>
       </div>
       <% }) %>
