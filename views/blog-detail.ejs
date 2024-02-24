@@ -3,7 +3,30 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <div class="blog-left">
+        <div class="blog-left text-light" style="background-color: #221d2d">
+          <h1><%= d.title %></h1>
+          <div class="posted-on text-light">
+            <p>
+              by <span class="text-light">RSGiTECH</span> on
+              <span class="text-light"
+                ><%= d.createdAt.toLocaleDateString() %></span
+              >
+            </p>
+          </div>
+          <div class="detail-img" style="margin: 71px 15px">
+            <img
+              style="border: 2px white solid"
+              src="<%= d.image.url %>"
+              alt="blog1"
+              height="400px"
+              width="788px"
+            />
+          </div>
+          <div class="blog-desc">
+            <p><%= d.descripition %></p>
+          </div>
+        </div>
+        <!-- <div class="blog-left">
           <h1><%= d.title %></h1>
           <div class="posted-on">
             <p>
@@ -20,15 +43,37 @@
             />
           </div>
           <div class="blog-desc">
-            <p><%= d.descripition.slice( 0, 100) %></p>
+            <p><%= d.descripition.slice %></p>
             <p></p>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="col-md-4">
         <div class="blog-right">
-          <div class="right-widget recent-post">
+          <div
+            class="right-widget recent-post"
+            style="background-color: #221d2d"
+          >
+            <center style="margin-bottom: 68px; margin-top: 27px">
+              <h3>Recent Blogs</h3>
+            </center>
+            <% r.forEach((recentitem) => { %>
+            <a href="#" class="mt-5 mb-5">
+              <div class="rb-box">
+                <div class="rb-box-img">
+                  <img src="<%= recentitem.image.url %>" alt="blog1" />
+                </div>
+                <div class="rb-box-desc">
+                  <h4><%= recentitem.title %></h4>
+                  <p><%= recentitem.createdAt.toLocaleDateString() %></p>
+                </div>
+              </div>
+            </a>
+            <% }) %>
+          </div>
+
+          <!-- <div class="right-widget recent-post">
             <h3>Recent Blogs</h3>
             <% r.forEach((recentitem)=>{ %>
             <a href="#">
@@ -48,23 +93,7 @@
               </div>
             </a>
             <% }) %>
-          </div>
-
-          <div class="right-widget categories">
-            <h3>Categories</h3>
-            <ul>
-              <li><a href="#">Technology</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Culture</a></li>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Politics</a></li>
-              <li><a href="#">Opinion</a></li>
-              <li><a href="#">Science</a></li>
-              <li><a href="#">Health</a></li>
-              <li><a href="#">Style</a></li>
-              <li><a href="#">Travel</a></li>
-            </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
